@@ -1,6 +1,9 @@
 <?php
 
-        function create_deck() {
+/**
+ * @return array
+ */
+function create_deck() {
             return [
                 2   =>  2,
                 3   =>  3,
@@ -28,11 +31,20 @@
             return $deck[array_rand($deck)];
         }
 
-        function calculate($card1, $card2) {
+/**
+ * @param $card1
+ * @param $card2
+ * @return int
+ */
+function calculate($card1, $card2) {
             return $card1 + $card2;
         }
 
-        function winner($score1, $score2) {
+/**
+ * @param $score1
+ * @param $score2
+ */
+function winner($score1, $score2) {
             if ($score1 > $score2) {
                 echo "You win - Hooray for you";
 
@@ -41,7 +53,10 @@
             }
         }
 
-        function play_game() {
+/**
+ *
+ */
+function play_game() {
             $deck = create_deck();
             $card1 = deal($deck);
             $card2 = deal($deck);
